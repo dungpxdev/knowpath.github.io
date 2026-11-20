@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Knowpath User Guide — Connect ChatGPT & Master Technical Interviews</title>
+  <meta name="description" content="Quick, minimal single-page guide to connect Knowpath MCP to ChatGPT, practice technical interview questions, and track learning progress with AI analytics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-link">
+        <div class="brand-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+        </div>
+        <span>Knowpath</span>
+        <span class="brand-tag">Guide</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#connect" class="nav-link">1. Connect ChatGPT</a></li>
+          <li><a href="#workflow" class="nav-link">2. Learning Workflow</a></li>
+          <li><a href="#progress" class="nav-link">3. Track Progress</a></li>
+          <li><a href="#tools" class="nav-link">MCP Reference</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle-btn" class="btn-icon" aria-label="Toggle light and dark theme">
+          <span id="theme-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </span>
+        </button>
+
+        <a href="https://bloomcommerce.space" target="_blank" rel="noopener noreferrer" class="btn-primary">
+          <span>Open Web App</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+
+        <button class="btn-icon mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-pill">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+        <span>Model Context Protocol (MCP) Integration</span>
+      </div>
+
+      <h1 class="hero-title">
+        Master Technical Interviews with <span>ChatGPT & Knowpath</span>
+      </h1>
+
+      <p class="hero-description">
+        Turn ChatGPT into an adaptive, rigorous technical interviewer backed by 1,700+ verified engineering questions, automated rubric grading, and persistent knowledge-gap tracking.
+      </p>
+
+      <div class="hero-features">
+        <div class="hero-feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span>3-Minute Setup</span>
+        </div>
+        <div class="hero-feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>Real-World Scenarios</span>
+        </div>
+        <div class="hero-feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 20V10"></path>
+            <path d="M18 20V4"></path>
+            <path d="M6 20v-4"></path>
+          </svg>
+          <span>Automated Weakness Analytics</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="#connect" class="btn-primary">
+          <span>Start Setup Guide</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <polyline points="19 12 12 19 5 12"></polyline>
+          </svg>
+        </a>
+        <a href="#workflow" class="btn-secondary">
+          <span>Explore Practice Loop</span>
+        </a>
+      </div>
+
+      <!-- Quick Endpoint Copy Banner -->
+      <div class="endpoint-banner">
+        <div class="endpoint-info">
+          <span class="endpoint-label">SSE URL</span>
+          <span class="endpoint-value" id="hero-mcp-url">https://bloomcommerce.space/mcp/sse</span>
+        </div>
+        <button class="btn-copy" data-target="hero-mcp-url" aria-label="Copy MCP Server URL">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy URL</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Connect Knowpath to ChatGPT -->
+  <section id="connect" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Step-by-Step Setup</span>
+        <h2 class="section-title">1. Connect Knowpath to ChatGPT</h2>
+        <p class="section-subtitle">
+          Follow three simple steps to connect ChatGPT with the Knowpath Model Context Protocol (MCP) server. Once connected, ChatGPT dynamically accesses your real questions and learning history.
+        </p>
+      </div>
+
+      <!-- Architecture Visual Illustration -->
+      <div class="diagram-card">
+        <div class="diagram-header">
+          <div class="diagram-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>How ChatGPT Communicates with Knowpath</span>
+          </div>
+          <span class="brand-tag">Architecture</span>
+        </div>
+
+        <div class="diagram-svg-container">
+          <svg width="860" height="160" viewBox="0 0 860 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- ChatGPT Box -->
+            <rect x="20" y="30" width="190" height="100" rx="12" fill="var(--color-bg-muted)" stroke="var(--color-border-emphasized)" stroke-width="2"/>
+            <circle cx="55" cy="65" r="16" fill="#10A37F"/>
+            <text x="55" y="70" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold">AI</text>
+            <text x="82" y="62" fill="var(--color-text-primary)" font-family="sans-serif" font-size="15" font-weight="700">ChatGPT</text>
+            <text x="82" y="80" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="11">MCP Client / Interface</text>
+            <rect x="35" y="98" width="160" height="20" rx="4" fill="var(--color-accent-muted)"/>
+            <text x="115" y="112" text-anchor="middle" fill="var(--color-accent)" font-family="sans-serif" font-size="10" font-weight="600">Calls MCP Tools</text>
+
+            <!-- Arrow 1 -->
+            <path d="M210 80 H 320" stroke="var(--color-accent)" stroke-width="2" stroke-dasharray="4 4"/>
+            <polygon points="325,80 315,75 315,85" fill="var(--color-accent)"/>
+            <text x="268" y="72" text-anchor="middle" fill="var(--color-accent)" font-family="sans-serif" font-size="10" font-weight="600">SSE Protocol</text>
+
+            <!-- Knowpath Server Box -->
+            <rect x="330" y="20" width="230" height="120" rx="12" fill="var(--color-bg-surface)" stroke="var(--color-accent)" stroke-width="2"/>
+            <circle cx="365" cy="55" r="16" fill="var(--color-accent)"/>
+            <text x="365" y="60" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold">KP</text>
+            <text x="392" y="52" fill="var(--color-text-primary)" font-family="sans-serif" font-size="15" font-weight="700">Knowpath MCP</text>
+            <text x="392" y="70" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="11">bloomcommerce.space/mcp/sse</text>
+            <!-- Sub-tags -->
+            <rect x="345" y="90" width="95" height="18" rx="4" fill="var(--color-bg-muted)"/>
+            <text x="392" y="103" text-anchor="middle" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="9" font-weight="600">Spring Boot 3.4</text>
+            <rect x="448" y="90" width="95" height="18" rx="4" fill="var(--color-bg-muted)"/>
+            <text x="495" y="103" text-anchor="middle" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="9" font-weight="600">Spring AI 1.0</text>
+            <text x="445" y="128" text-anchor="middle" fill="var(--color-text-muted)" font-family="sans-serif" font-size="10">Session &amp; Attempt Engine</text>
+
+            <!-- Arrow 2 -->
+            <path d="M560 80 H 660" stroke="var(--color-border-emphasized)" stroke-width="2"/>
+            <polygon points="665,80 655,75 655,85" fill="var(--color-border-emphasized)"/>
+            <text x="612" y="72" text-anchor="middle" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10" font-weight="600">SQL &amp; Real-Time</text>
+
+            <!-- Data & Analytics Box -->
+            <rect x="670" y="30" width="170" height="100" rx="12" fill="var(--color-bg-muted)" stroke="var(--color-border-emphasized)" stroke-width="2"/>
+            <circle cx="700" cy="65" r="16" fill="#3B82F6"/>
+            <text x="700" y="70" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="12" font-weight="bold">DB</text>
+            <text x="725" y="62" fill="var(--color-text-primary)" font-family="sans-serif" font-size="14" font-weight="700">Analytics &amp; DB</text>
+            <text x="725" y="80" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="11">PostgreSQL 16</text>
+            <rect x="685" y="98" width="140" height="20" rx="4" fill="var(--color-success-bg)"/>
+            <text x="755" y="112" text-anchor="middle" fill="var(--color-success)" font-family="sans-serif" font-size="10" font-weight="600">1,756+ Questions Indexed</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Step Cards Grid -->
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">1</div>
+            <h3 class="step-card-title">Locate Connection Endpoints</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Knowpath exposes a production-ready Server-Sent Events (SSE) endpoint conforming to the open Model Context Protocol standard.</p>
+            
+            <div class="code-box">
+              <div class="code-header">
+                <span class="code-title">MCP SERVER-SENT EVENTS (SSE)</span>
+                <button class="btn-copy" data-copy-text="https://bloomcommerce.space/mcp/sse" aria-label="Copy SSE URL">Copy</button>
+              </div>
+              <div class="code-content">https://bloomcommerce.space/mcp/sse</div>
+            </div>
+
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted);">
+              <strong>Message endpoint:</strong> <code>https://bloomcommerce.space/mcp/message</code>
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">2</div>
+            <h3 class="step-card-title">Add MCP Server to ChatGPT</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Configure the server in ChatGPT or your favorite MCP-compatible agent environment:</p>
+            <ol>
+              <li>Open <strong>ChatGPT Settings</strong> → <strong>Connected Apps</strong> (or <strong>Developer Mode</strong>).</li>
+              <li>Select <strong>Add MCP Server</strong>.</li>
+              <li>Name it <strong>Knowpath</strong> and paste the SSE URL above.</li>
+              <li>Save and enable all requested tool capabilities.</li>
+            </ol>
+
+            <div class="callout callout-info">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <div>
+                <strong>Authentication:</strong> Ensure your user account is registered on <a href="https://bloomcommerce.space" target="_blank">bloomcommerce.space</a>. Bearer tokens are provided automatically via Auth0 OAuth.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">3</div>
+            <h3 class="step-card-title">Verify Connection in ChatGPT</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Send a quick verification prompt to ChatGPT to ensure it can reach Knowpath:</p>
+            
+            <div class="code-box">
+              <div class="code-header">
+                <span class="code-title">TEST PROMPT</span>
+                <button class="btn-copy" data-target="test-prompt-text" aria-label="Copy test prompt">Copy</button>
+              </div>
+              <div class="code-content" id="test-prompt-text">Check my Knowpath connection and tell me my current interview mode.</div>
+            </div>
+
+            <p style="font-weight: 600; font-size: 0.8125rem; margin-top: 0.5rem; color: var(--color-text-primary);">Verification Checklist:</p>
+            <ul class="checklist">
+              <li class="checklist-item">
+                <span class="checklist-icon">✓</span>
+                <span>ChatGPT invokes <code>get_current_mode</code> tool</span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon">✓</span>
+                <span>Returns active mode: <code>SINGLE_TOPIC</code></span>
+              </li>
+              <li class="checklist-item">
+                <span class="checklist-icon">✓</span>
+                <span>Shows default topic: <code>java-concurrency</code></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MCP Client Configuration Snippets (JSON) -->
+      <div class="diagram-card">
+        <div class="diagram-header">
+          <div class="diagram-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Standard MCP Client Configuration Snippet</span>
+          </div>
+          <span class="brand-tag">JSON Config</span>
+        </div>
+
+        <p style="font-size: 0.9375rem; color: var(--color-text-secondary); margin-bottom: 1rem;">
+          Using ChatGPT Desktop, Claude Desktop, Cursor, or Windsurf? Paste this configuration into your <code>mcpServers</code> configuration file:
+        </p>
+
+        <div class="tabs-container">
+          <div class="tabs-nav">
+            <button class="tab-btn active" data-tab="json-standard">Standard SSE Config</button>
+            <button class="tab-btn" data-tab="json-auth">With Auth0 Bearer Token</button>
+          </div>
+
+          <div class="tab-pane active" data-tab-content="json-standard">
+            <div class="code-box" style="margin: 0;">
+              <div class="code-header">
+                <span class="code-title">mcp_config.json</span>
+                <button class="btn-copy" data-target="config-standard-code" aria-label="Copy config">Copy JSON</button>
+              </div>
+              <pre class="code-content" id="config-standard-code">{
+  "mcpServers": {
+    "knowpath": {
+      "url": "https://bloomcommerce.space/mcp/sse"
+    }
+  }
+}</pre>
+            </div>
+          </div>
+
+          <div class="tab-pane" data-tab-content="json-auth">
+            <div class="code-box" style="margin: 0;">
+              <div class="code-header">
+                <span class="code-title">mcp_config_auth.json</span>
+                <button class="btn-copy" data-target="config-auth-code" aria-label="Copy auth config">Copy JSON</button>
+              </div>
+              <pre class="code-content" id="config-auth-code">{
+  "mcpServers": {
+    "knowpath": {
+      "url": "https://bloomcommerce.space/mcp/sse",
+      "headers": {
+        "Authorization": "Bearer YOUR_KNOWPATH_AUTH0_TOKEN"
+      }
+    }
+  }
+}</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: How to Use Knowpath for Learning -->
+  <section id="workflow" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">The Practice Loop</span>
+        <h2 class="section-title">2. How to Practice &amp; Learn with ChatGPT</h2>
+        <p class="section-subtitle">
+          Experience realistic, high-signal technical mock interviews. Knowpath orchestrates the questions while ChatGPT conducts the interview and provides rigorous rubric evaluations.
+        </p>
+      </div>
+
+      <!-- 4-Step Adaptive Practice Loop Diagram -->
+      <div class="diagram-card">
+        <div class="diagram-header">
+          <div class="diagram-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+            <span>The 4-Step Continuous Learning &amp; Feedback Cycle</span>
+          </div>
+          <span class="brand-tag">Practice Loop</span>
+        </div>
+
+        <div class="diagram-svg-container">
+          <svg width="900" height="150" viewBox="0 0 900 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Stage 1 -->
+            <rect x="10" y="25" width="190" height="100" rx="10" fill="var(--color-bg-muted)" stroke="var(--color-border-emphasized)" stroke-width="1.5"/>
+            <circle cx="35" cy="48" r="12" fill="var(--color-accent)"/>
+            <text x="35" y="52" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold">1</text>
+            <text x="56" y="52" fill="var(--color-text-primary)" font-family="sans-serif" font-size="13" font-weight="700">Configure Mode</text>
+            <text x="25" y="78" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">Select Single Topic or</text>
+            <text x="25" y="93" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">Complex Multi-Topic</text>
+            <text x="25" y="112" fill="var(--color-accent)" font-family="monospace" font-size="9.5">set_interview_mode</text>
+
+            <!-- Connector 1 -->
+            <path d="M200 75 H 230" stroke="var(--color-accent)" stroke-width="2"/>
+            <polygon points="235,75 227,71 227,79" fill="var(--color-accent)"/>
+
+            <!-- Stage 2 -->
+            <rect x="240" y="25" width="190" height="100" rx="10" fill="var(--color-bg-muted)" stroke="var(--color-border-emphasized)" stroke-width="1.5"/>
+            <circle cx="265" cy="48" r="12" fill="var(--color-accent)"/>
+            <text x="265" y="52" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold">2</text>
+            <text x="286" y="52" fill="var(--color-text-primary)" font-family="sans-serif" font-size="13" font-weight="700">Preload &amp; Ask</text>
+            <text x="255" y="78" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">Loads curated questions</text>
+            <text x="255" y="93" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">from database syllabus</text>
+            <text x="255" y="112" fill="var(--color-accent)" font-family="monospace" font-size="9.5">get_next_question</text>
+
+            <!-- Connector 2 -->
+            <path d="M430 75 H 460" stroke="var(--color-accent)" stroke-width="2"/>
+            <polygon points="465,75 457,71 457,79" fill="var(--color-accent)"/>
+
+            <!-- Stage 3 -->
+            <rect x="470" y="25" width="190" height="100" rx="10" fill="var(--color-bg-muted)" stroke="var(--color-border-emphasized)" stroke-width="1.5"/>
+            <circle cx="495" cy="48" r="12" fill="var(--color-accent)"/>
+            <text x="495" y="52" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold">3</text>
+            <text x="516" y="52" fill="var(--color-text-primary)" font-family="sans-serif" font-size="13" font-weight="700">Answer &amp; Rubric</text>
+            <text x="485" y="78" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">AI evaluates 1-10 score,</text>
+            <text x="485" y="93" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">confidence 1-5, gaps</text>
+            <text x="485" y="112" fill="var(--color-accent)" font-family="monospace" font-size="9.5">save_question_attempt</text>
+
+            <!-- Connector 3 -->
+            <path d="M660 75 H 690" stroke="var(--color-accent)" stroke-width="2"/>
+            <polygon points="695,75 687,71 687,79" fill="var(--color-accent)"/>
+
+            <!-- Stage 4 -->
+            <rect x="700" y="25" width="190" height="100" rx="10" fill="var(--color-bg-muted)" stroke="var(--color-border-emphasized)" stroke-width="1.5"/>
+            <circle cx="725" cy="48" r="12" fill="#16A34A"/>
+            <text x="725" y="52" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="bold">4</text>
+            <text x="746" y="52" fill="var(--color-text-primary)" font-family="sans-serif" font-size="13" font-weight="700">Target Weaknesses</text>
+            <text x="715" y="78" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">Identifies knowledge gap;</text>
+            <text x="715" y="93" fill="var(--color-text-secondary)" font-family="sans-serif" font-size="10.5">triggers targeted retake</text>
+            <text x="715" y="112" fill="var(--color-accent)" font-family="monospace" font-size="9.5">get_knowledge_gap</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Practice Workflow Detailed Breakdown -->
+      <div class="steps-grid">
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">1</div>
+            <h3 class="step-card-title">Choose Interview Mode</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Knowpath provides two tailored interview operating modes:</p>
+            <ul>
+              <li><strong>SINGLE_TOPIC:</strong> Focused deep-dive on one specific technology (e.g., <em>Java Concurrency</em>, <em>PostgreSQL Optimization</em>, <em>Kafka Streaming</em>, or <em>Kubernetes</em>).</li>
+              <li><strong>COMPLEX_MULTI_TOPIC:</strong> Broad system engineering interview spanning architecture, concurrency, caching, and resiliency.</li>
+            </ul>
+            <div class="code-box">
+              <div class="code-header">
+                <span class="code-title">PROMPT EXAMPLE</span>
+                <button class="btn-copy" data-copy-text="Let's do a technical interview on Java Concurrency in Single Topic mode." aria-label="Copy prompt">Copy</button>
+              </div>
+              <div class="code-content">Let's do a technical interview on Java Concurrency in Single Topic mode.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">2</div>
+            <h3 class="step-card-title">Receive Real Questions</h3>
+          </div>
+          <div class="step-card-body">
+            <p>ChatGPT triggers <code>preload_questions</code> to load verified questions from the database, then fetches the first question via <code>get_next_question</code>.</p>
+            <p>Questions include:</p>
+            <ul>
+              <li>Realistic production context and requirements.</li>
+              <li>Expected trade-offs and complexity constraints.</li>
+              <li>Real edge cases that differentiate senior candidates.</li>
+            </ul>
+            <div class="code-box">
+              <div class="code-header">
+                <span class="code-title">PROMPT EXAMPLE</span>
+                <button class="btn-copy" data-copy-text="Preload 5 questions and give me the first question." aria-label="Copy prompt">Copy</button>
+              </div>
+              <div class="code-content">Preload 5 questions and give me the first question.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">3</div>
+            <h3 class="step-card-title">Answer &amp; Get Rubric Evaluation</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Provide your comprehensive technical solution. ChatGPT scores your answer and saves it via <code>save_question_attempt</code> with:</p>
+            <ul>
+              <li><strong>AI Evaluation Score:</strong> 1 to 10 scale assessing accuracy and architectural depth.</li>
+              <li><strong>Candidate Confidence:</strong> 1 to 5 scale measuring your certainty.</li>
+              <li><strong>Strengths &amp; Gaps:</strong> Key edge cases missed, thread safety risks, or memory bottlenecks.</li>
+            </ul>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 0.5rem;">
+              Your answer is instantly saved to your persistent history in the PostgreSQL database.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real Interview Chat Simulation Card -->
+      <div class="diagram-card">
+        <div class="diagram-header">
+          <div class="diagram-title">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Live Interaction Example in ChatGPT</span>
+          </div>
+          <span class="brand-tag">Interactive Simulation</span>
+        </div>
+
+        <div class="chat-simulation">
+          <!-- Turn 1: User -->
+          <div class="chat-bubble chat-user">
+            <div class="chat-avatar avatar-user">You</div>
+            <div class="chat-body">
+              <div class="chat-author">Candidate</div>
+              <div class="chat-text">I'm ready for my first Java Concurrency question.</div>
+            </div>
+          </div>
+
+          <!-- Turn 2: AI -->
+          <div class="chat-bubble chat-ai">
+            <div class="chat-avatar avatar-ai">GPT</div>
+            <div class="chat-body">
+              <div class="chat-author">
+                <span>ChatGPT</span>
+                <span class="brand-tag" style="font-size: 0.625rem;">with Knowpath MCP</span>
+              </div>
+              <div class="chat-tool-call">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Tool call: get_next_question(sessionId="sess-102")</span>
+              </div>
+              <div class="chat-text">
+                <strong>Question #1: Thread Safety in High-Throughput Token Bucket Rate Limiter</strong><br>
+                <em>"How would you implement an in-memory token bucket rate limiter in Java to handle 100,000 requests/sec with minimal contention? Compare synchronized blocks vs AtomicLong CAS vs LongAdder, and explain how you handle clock drift."</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Turn 3: User Answer -->
+          <div class="chat-bubble chat-user">
+            <div class="chat-avatar avatar-user">You</div>
+            <div class="chat-body">
+              <div class="chat-author">Candidate</div>
+              <div class="chat-text">
+                I would use <code>AtomicLong</code> with a CAS loop comparing nanoTime differences. Synchronized blocks create thread blocking under 100k req/s. For clock drift, I rely on monotonic <code>System.nanoTime()</code> rather than wall-clock <code>currentTimeMillis()</code>.
+              </div>
+            </div>
+          </div>
+
+          <!-- Turn 4: AI Feedback & Tool Call -->
+          <div class="chat-bubble chat-ai">
+            <div class="chat-avatar avatar-ai">GPT</div>
+            <div class="chat-body">
+              <div class="chat-author">ChatGPT</div>
+              <div class="chat-tool-call">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Tool call: save_question_attempt(questionId=842, aiScore=8.5, confidence=4)</span>
+              </div>
+              <div class="chat-text">
+                Great answer! Here is your technical breakdown:
+                <div class="rubric-card">
+                  <div class="rubric-score">
+                    <span class="score-badge">AI Score: 8.5 / 10</span>
+                    <span style="font-size: 0.8125rem; color: var(--color-text-secondary);">Confidence: 4/5 (High)</span>
+                  </div>
+                  <p style="font-size: 0.875rem; margin-bottom: 0.35rem;"><strong>Strengths:</strong> Correctly identified <code>System.nanoTime()</code> for monotonic time and highlighted lock-free CAS advantages over coarse synchronization.</p>
+                  <p style="font-size: 0.875rem; color: var(--color-warning);"><strong>Knowledge Gap:</strong> Under extreme CAS contention with 100k req/s, multiple threads spinning on a single cache line can cause CPU thrashing. Mentioning <em>striped token buckets</em> or cell padding (like <code>Striped64</code>) would earn full points.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Track Learning Progress -->
+  <section id="progress" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Knowledge Metrics</span>
+        <h2 class="section-title">3. Track Learning Progress &amp; Weaknesses</h2>
+        <p class="section-subtitle">
+          Never practice blindly. Knowpath automatically turns your interview attempts into detailed syllabus coverage metrics, weakness detection, and targeted recommendations.
+        </p>
+      </div>
+
+      <!-- Real Metrics Dashboard Preview Grid -->
+      <div class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header">Eligible Questions</div>
+          <div class="metric-value">1,756</div>
+          <div class="metric-desc">8.3% syllabus completed (145 answered)</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">Needs Improvement</div>
+          <div class="metric-value metric-badge-warning">45</div>
+          <div class="metric-desc">Confidence ≤ 3 or AI score ≤ 7</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">Critical Attention</div>
+          <div class="metric-value metric-badge-danger">46</div>
+          <div class="metric-desc">Confidence ≤ 2 or AI score ≤ 5</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">Active Topics Covered</div>
+          <div class="metric-value metric-badge-success">11 / 26</div>
+          <div class="metric-desc">92 / 323 syllabus tags active</div>
+        </div>
+      </div>
+
+      <!-- 3 Analytics Pillars -->
+      <div class="steps-grid">
+        <!-- Pillar 1 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">1</div>
+            <h3 class="step-card-title">Review Learning History</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Access your complete timeline of practice sessions in the Web App:</p>
+            <ul>
+              <li><strong>Session Velocity:</strong> Track completed sessions, answered questions, and average scores day-by-day.</li>
+              <li><strong>Interactive Answers Drawer:</strong> View exactly what you wrote, the evaluation rubric, and AI suggestions.</li>
+              <li><strong>Filterable Views:</strong> Filter by Topic, Tag, Date, or Session ID.</li>
+            </ul>
+            <a href="https://bloomcommerce.space" target="_blank" class="btn-secondary" style="margin-top: 1rem; width: 100%; justify-content: center;">
+              <span>Open Dashboard</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">2</div>
+            <h3 class="step-card-title">Identify Knowledge Gaps</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Knowpath classifies every question to help you target what matters most:</p>
+            <ul>
+              <li><strong style="color: var(--color-warning);">⚠️ Needs Improvement:</strong> Answers where confidence was low (≤ 3) or AI score did not meet senior standards (≤ 7).</li>
+              <li><strong style="color: var(--color-danger);">🚨 Critical Attention:</strong> Concept misunderstandings (score ≤ 5) or high uncertainty (confidence ≤ 2).</li>
+            </ul>
+            <p style="font-size: 0.8125rem; color: var(--color-text-secondary); margin-top: 0.5rem;">
+              ChatGPT uses <code>get_knowledge_gap_feedback</code> to inspect these gaps before your next interview.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="step-card">
+          <div class="step-card-header">
+            <div class="step-number">3</div>
+            <h3 class="step-card-title">Targeted Weakness Retakes</h3>
+          </div>
+          <div class="step-card-body">
+            <p>Tell ChatGPT to practice only questions you previously struggled with:</p>
+            <div class="code-box">
+              <div class="code-header">
+                <span class="code-title">GAP-FOCUSED PROMPT</span>
+                <button class="btn-copy" data-target="gap-prompt-text" aria-label="Copy prompt">Copy</button>
+              </div>
+              <div class="code-content" id="gap-prompt-text">Preload 5 questions from my knowledge gaps only and test me on them.</div>
+            </div>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted);">
+              ChatGPT sets <code>knowledge_gap_only = true</code> in the <code>preload_questions</code> MCP tool, delivering immediate targeted practice.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MCP Tools Reference -->
+  <section id="tools" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Specification</span>
+        <h2 class="section-title">Knowpath MCP Tool Reference</h2>
+        <p class="section-subtitle">
+          Overview of core tools registered on the Knowpath Model Context Protocol server.
+        </p>
+      </div>
+
+      <div class="tools-table-container">
+        <table class="tools-table">
+          <thead>
+            <tr>
+              <th>Tool Name</th>
+              <th>Description</th>
+              <th>Key Parameters</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="tool-name-code">get_topic</span></td>
+              <td>Retrieve available interview topics, slug names, and tag taxonomies.</td>
+              <td><code>page</code>, <code>size</code></td>
+            </tr>
+            <tr>
+              <td><span class="tool-name-code">get_current_mode</span></td>
+              <td>Check user's active interview mode (SINGLE_TOPIC or COMPLEX_MULTI_TOPIC).</td>
+              <td><em>None</em></td>
+            </tr>
+            <tr>
+              <td><span class="tool-name-code">set_interview_mode</span></td>
+              <td>Switch between focused single topic and holistic multi-topic interview loops.</td>
+              <td><code>mode</code>, <code>topicSlug</code></td>
+            </tr>
+            <tr>
+              <td><span class="tool-name-code">preload_questions</span></td>
+              <td>Preload question sets with optional knowledge-gap filtering and topic scoping.</td>
+              <td><code>limit</code>, <code>tags</code>, <code>knowledge_gap_only</code></td>
+            </tr>
+            <tr>
+              <td><span class="tool-name-code">get_next_question</span></td>
+              <td>Fetch the next queued question for the current active interview session.</td>
+              <td><code>sessionId</code></td>
+            </tr>
+            <tr>
+              <td><span class="tool-name-code">save_question_attempt</span></td>
+              <td>Persist candidate response, AI rubric evaluation score (1–10), and confidence rating (1–5).</td>
+              <td><code>questionId</code>, <code>aiScore</code>, <code>candidateConfidence</code>, <code>feedback</code></td>
+            </tr>
+            <tr>
+              <td><span class="tool-name-code">get_knowledge_gap_feedback</span></td>
+              <td>Retrieve historical assessment data and AI feedback to isolate weak concepts.</td>
+              <td><code>sessionId</code>, <code>topic</code>, <code>question</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Ready to Supercharge Your Interview Prep?</h2>
+        <p>
+          Connect ChatGPT in 3 minutes, practice against curated production engineering challenges, and track your progress to mastery.
+        </p>
+        <div class="hero-cta-group" style="margin-bottom: 0;">
+          <a href="#connect" class="btn-primary">
+            <span>Connect to ChatGPT</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="https://bloomcommerce.space" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <span>Open Knowpath Web App</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div>
+        <p><strong>Knowpath</strong> — AI-Powered Technical Interview &amp; Knowledge Mastery Platform.</p>
+        <p style="color: var(--color-text-muted); font-size: 0.8125rem; margin-top: 0.25rem;">
+          Single-Page User Guide hosted at knowpath.github.io
+        </p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="https://bloomcommerce.space" target="_blank">Web Dashboard</a></li>
+        <li><a href="https://github.com/dungpxdev/knowpath" target="_blank">Knowpath Backend</a></li>
+        <li><a href="https://github.com/dungpxdev/knowpath-ui" target="_blank">Knowpath UI</a></li>
+        <li><a href="https://modelcontextprotocol.io" target="_blank">MCP Spec</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
